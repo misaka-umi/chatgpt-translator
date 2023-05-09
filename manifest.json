@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "OpenAI Chat Extension",
+    "version": "1.0",
+    "description": "A simple extension for OpenAI Chat.",
+    "permissions": [
+        "activeTab",
+        "https://api.cognitive.microsofttranslator.com/*"
+      ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://chat.openai.com/*"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
